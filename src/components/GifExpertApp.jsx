@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AddProperty from "./AddProperty";
+import AddCategory from "./AddCategory";
 import GifGrid from "./GifGrid";
 
 export const GifExpertApp = () => {
@@ -13,7 +13,7 @@ export const GifExpertApp = () => {
   return (
     <>
       <h1>GifExpertApp</h1>
-      <AddProperty onNewCategory={(value) => onAddCategory(value)} />
+      <AddCategory onNewCategory={(value) => onAddCategory(value)} />
       {categories.map((category) => {
         return <GifGrid key={crypto.randomUUID()} category={category} />;
       })}

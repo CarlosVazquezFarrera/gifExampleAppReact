@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-export default function AddProperty({ onNewCategory }) {
+export default function AddCategory({ onNewCategory }) {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = ({ target }) => {
@@ -19,7 +19,7 @@ export default function AddProperty({ onNewCategory }) {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} aria-label="form-category">
       <input
         type="text"
         required
@@ -30,6 +30,6 @@ export default function AddProperty({ onNewCategory }) {
     </form>
   );
 }
-AddProperty.propTypes = {
+AddCategory.propTypes = {
   onNewCategory: PropTypes.func.isRequired,
 };
